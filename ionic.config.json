@@ -1,0 +1,7 @@
+{
+  "name": "PapperApp",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
