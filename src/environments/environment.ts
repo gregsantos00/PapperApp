@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   //URL_API : 'https://localhost:5001/api/',
-  URL_API : 'https://webapi20190801035740.azurewebsites.net/api/'
+  URL_API : 'https://papperappfunction.azurewebsites.net/api/'
 };
 
 /*

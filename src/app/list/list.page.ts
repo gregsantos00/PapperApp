@@ -29,13 +29,9 @@ export class ListPage implements OnInit {
     this.productService.getProducts().then((x) => {
 
       this.items = x;
-      // for (let i = 0; i < x.length; i++) {
-      //   this.items.push({
-      //     title: x[i].Descricao,
-      //     note: x[i].Preco,
-      //     icon: this.icons[x[i].IdCategoria]
-      //   });
-      // }
+      for (let i = 0; i < this.items.length; i++) {
+        this.items[i].IdCategoria = 2;
+      }
 
     });
   }

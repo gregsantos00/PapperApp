@@ -33,6 +33,7 @@ export class BarcodePage implements OnInit {
   findProduct(code: string): void {
     this.productService.getProductByCode(code).then((x: any) => {
         this.model = x;
+        console.log(this.model);
     });
   }
 }
