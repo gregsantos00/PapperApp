@@ -35,6 +35,14 @@ export class ListPage implements OnInit {
 
     });
   }
+  findProduct(name: string): void {
+    this.productService.getProductByName(name).then((x: any) => {
+        this.items = x;
+        for (let i = 0; i < this.items.length; i++) {
+          this.items[i].IdCategoria = 2;
+        }
+    });
+  }
   // add back when alpha.4 is out
   // navigate(item) {
   //   this.router.navigate(['/list', JSON.stringify(item)]);

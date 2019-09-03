@@ -11,17 +11,24 @@ export class ProductService {
     }
 
     public getProducts(): Promise<Array<ProductModel>> {
-        let url = `${environment.URL_API}produto/25/`;
+        let url = `${environment.URL_API}produto/ALL/25/`;
         return this.request.get(url)
             .toPromise()
             .then((data: any) => data.json());
 
     }
     public getProductByCode(code : string): Promise<ProductModel> {
-        let url = `${environment.URL_API}produto/1/${code}`;
+        let url = `${environment.URL_API}produto/ID/1/${code}`;
         return this.request.get(url)
             .toPromise()
             .then((data: any) => data.json()[0]);
+
+    }
+    public getProductByName(nome : string): Promise<Array<ProductModel>> {
+        let url = `${environment.URL_API}produto/NAME/25/${nome}`;
+        return this.request.get(url)
+            .toPromise()
+            .then((data: any) => data.json());
 
     }
 }
